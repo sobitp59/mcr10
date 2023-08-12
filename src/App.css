@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+
+body{
+  font-family: 'Manrope', sans-serif;
+}
+
+.applayout{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+
+.header{
+  border: 2px solid;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+
+/* DASHBOARD */
+.dashboard, .department, .products, .productDetails{
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.dashboard__lists, .department__lists{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.dashboard__lists span, .department__lists span{
+  border: 2px solid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+/* PRODUCTS */
+.products__header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid;
+  padding: 0.5rem;
+}
+
+.products__heading{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 5fr 1fr 1fr 1fr 1fr;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  padding: 0.5rem;
+  align-items: start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.products__heading h4{
+  width: 100%;
+}
+
+.product__lists{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.product__list{
+  border: 1.5px solid rgba(0, 0, 0, 0.185);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 5fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  /* align-items: ; */
+}
+
+.product__list img{
+  width: 100px;
+}
+
+.product__list h4, p{
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+.products__heading h4{
+  width: 100%;
+}
+
+
+/* PRODUCT DETAILS */
+.productDetails img{
+  width: 50%;
+}
+
+/* form */
+.products{
+  position: relative;
+}
+
+.form{
+  width: 40%;
+  gap: 0.5rem;
+  height: 80vh;
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.103);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+}
+
+.form label{
+  display: flex;
+  flex-direction: column;
+}
