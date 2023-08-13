@@ -6,21 +6,31 @@ import { useData } from '../context/InventoryContext';
 
 const Products = () => {
     const {inventoryInfo} = useData();
-    const [showForm, setShowForm] = useState(false)
+    const [showForm, setShowForm] = useState(false);
 
+    const departments = [...new Set(inventoryInfo?.map(({department}) => department))]
+
+    const [selectDepartment, setSelectDepartment] = useState("")
+    const [filterBy, setFilterBy] = useState("")
+    const [checkedLowStock, setCheckedLowStock] = useState(false)
+
+    const inventoryDatas = inventoryInfo?.filter(({department}) => department?.includes(selectDepartment)).sort((a, b) => filterBy === 'price' ? a.price - b.price : filterBy === 'stock' ? a.stock - b.stock : filterBy === 'name' && (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)).filter(({stock}) =>!checkedLowStock || stock <= 10 )
   return (
     <div className='products'>
         <section className='products__header'>
             <h3>products</h3>
-            <select name="" id="">
-                <option value="">1</option>
-                <option value="">2</option>
+            <select name="" id="" onChange={(e) => setSelectDepartment(e?.target.value)}>
+                <option value="">all departments</option>
+                {departments?.map((department, index) => <option key={index} value={department}>{department}</option> )}
             </select>
-            <input type="checkbox" />
-            <select name="" id="">
-                <option value="">name</option>
-                <option value="">price</option>
-                <option value="">stock</option>
+            <label htmlFor="">
+                <input type="checkbox" onChange={(e) => setCheckedLowStock(e.target.checked)} value={checkedLowStock}/>
+                low stock items
+            </label>
+            <select name="" id="" onChange={(e) => setFilterBy(e?.target.value)}>
+                <option value="name">name</option>
+                <option value="price">price</option>
+                <option value="stock">stock</option>
             </select>
             <button onClick={() => setShowForm(true)}>new</button>
         </section>
@@ -35,7 +45,7 @@ const Products = () => {
             <h4>supplier</h4>
         </section>
         <ul className='product__lists'>
-            {inventoryInfo?.map((product) => {
+            {inventoryDatas?.map((product) => {
                 const {id, department, name, description, price, stock, sku, supplier, delivered, imageUrl} = product;
 
                 return(

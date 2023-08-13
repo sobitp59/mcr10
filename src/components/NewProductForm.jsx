@@ -7,7 +7,7 @@ const NewProductForm = ({setShowForm}) => {
     const departments = [...new Set(inventoryInfo?.map(({department}) => department))]
     
     const [newProduct, setNewProduct] = useState({
-
+        
     });
 
   return (
