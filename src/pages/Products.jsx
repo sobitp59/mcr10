@@ -5,8 +5,7 @@ import NewProductForm from '../components/NewProductForm';
 import { useData } from '../context/InventoryContext';
 
 const Products = () => {
-    const {inventoryInfo, productDepartment
-        } = useData();
+    const {inventoryInfo, productDepartment} = useData();
     const [showForm, setShowForm] = useState(false);
 
     const departments = [...new Set(inventoryInfo?.map(({department}) => department))]
@@ -15,12 +14,13 @@ const Products = () => {
     const [filterBy, setFilterBy] = useState("")
     const [checkedLowStock, setCheckedLowStock] = useState(false)
 
-    const inventoryDatas = inventoryInfo?.filter(({department}) => department?.includes(selectDepartment)).sort((a, b) => filterBy === 'price' ? a.price - b.price : filterBy === 'stock' ? a.stock - b.stock : filterBy === 'name' && (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)).filter(({stock}) =>!checkedLowStock || stock <= 10 )
+    const inventoryDatas = inventoryInfo?.filter(({department}) => department?.includes(selectDepartment)).sort((a, b) => filterBy === 'price' ? a.price - b.price : filterBy === 'stock' ? a.stock - b.stock : filterBy === 'name' && (a.name < b.name ? -1 : a.name > b.name ? 1 : 0)).filter(({stock}) =>!checkedLowStock || stock <= 10 );
+
   return (
     <div className='products'>
         <section className='products__header'>
             <h3>products</h3>
-            <select name="" id="" onChange={(e) => setSelectDepartment(e?.target.value)}>
+            <select value={selectDepartment} onChange={(e) => setSelectDepartment(e?.target.value)}>
                 <option value="">all departments</option>
                 {departments?.map((department, index) => <option key={index} value={department}>{department}</option> )}
             </select>
