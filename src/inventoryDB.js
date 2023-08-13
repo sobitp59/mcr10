@@ -1,6 +1,6 @@
 export const inventoryData = [
     {
-      id: 1,
+      id: '1',
       department: 'Kitchen',
       name: 'Stainless Steel Cookware Set',
       description:
@@ -13,7 +13,7 @@ export const inventoryData = [
       imageUrl: 'https://m.media-amazon.com/images/I/616vJsA33kL.jpg',
     },
     {
-      id: 2,
+      id: '2',
       department: 'Kitchen',
       name: 'Electric Coffee Maker',
       description:
@@ -27,7 +27,7 @@ export const inventoryData = [
         'https://4.imimg.com/data4/NF/XX/MY-3554754/electric-coffee-maker-500x500.jpg',
     },
     {
-      id: 3,
+      id: '3',
       department: 'Clothing',
       name: "Men's Casual T-Shirt",
       description: 'A comfortable and stylish t-shirt for casual wear.',
@@ -40,7 +40,7 @@ export const inventoryData = [
         'https://4.imimg.com/data4/KS/HD/MY-718120/mens-casual-t-shirts-500x500.jpg',
     },
     {
-      id: 4,
+      id: '4',
       department: 'Clothing',
       name: "Women's Yoga Pants",
       description: 'High-quality yoga pants for maximum comfort during workouts.',
@@ -53,7 +53,7 @@ export const inventoryData = [
         'https://images.meesho.com/images/products/7488175/5b8f3_512.webp',
     },
     {
-      id: 5,
+      id: '5',
       department: 'Toys',
       name: 'Building Blocks Set',
       description:
@@ -67,7 +67,7 @@ export const inventoryData = [
         'https://smalltub.com/products/main/15451427001539408762Building-Blocks-Set1A.jpg',
     },
     {
-      id: 6,
+      id: '6',
       department: 'Toys',
       name: 'Remote Control Car',
       description:
@@ -81,7 +81,7 @@ export const inventoryData = [
         'https://rukminim2.flixcart.com/image/850/1000/kvfkivk0/remote-control-toy/g/0/3/remote-control-rc-car-4wd-monster-truck-off-road-8-wheels-high-original-imag8c6kexzt9zsa.jpeg?q=90',
     },
     {
-      id: 7,
+      id: '7',
       department: 'Kitchen',
       name: 'Non-Stick Frying Pan',
       description:
@@ -95,7 +95,7 @@ export const inventoryData = [
         'https://www.anko.co.in/cdn/shop/products/71yIQACoAiL.jpg?v=1687520426',
     },
     {
-      id: 8,
+      id: '8',
       department: 'Clothing',
       name: "Women's Running Shoes",
       description:
@@ -109,7 +109,7 @@ export const inventoryData = [
         'https://5.imimg.com/data5/SELLER/Default/2021/7/DU/DV/UN/26489940/kalenji-womens-run-support-running-shoes-500x500.jpg',
     },
     {
-      id: 9,
+      id: '9',
       department: 'Toys',
       name: 'Educational Puzzle Set',
       description: 'A set of educational puzzles to stimulate young minds.',
@@ -121,7 +121,7 @@ export const inventoryData = [
       imageUrl: 'https://m.media-amazon.com/images/I/81UK0PkJ6ZL.jpg',
     },
     {
-      id: 10,
+      id: '10',
       department: 'Kitchen',
       name: 'Blender with Multiple Speeds',
       description:

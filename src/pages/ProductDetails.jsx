@@ -6,8 +6,8 @@ const ProductDetails = () => {
     const {productID} = useParams();
     const {inventoryInfo} = useData();
 
-    const product = inventoryInfo?.filter(({id}) => id === Number(productID))
-    const [{name, department, description, price, stock, sku, supplier, delivered, imageUrl}] = product;
+    const product = inventoryInfo?.filter(({id}) => id === productID)
+    const [{name, department, description, price, stock, sku, supplier, delivered, imageUrl} = {}] = product;   
     
     
     return (
