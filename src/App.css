@@ -40,7 +40,7 @@ body{
   gap: 1.5rem;
 }
 
-.dashboard__lists span, .department__lists span{
+.dashboard__lists span, .department__lists a{
   border: 2px solid;
   padding: 1rem;
   border-radius: 0.5rem;

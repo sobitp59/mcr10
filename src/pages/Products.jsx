@@ -5,12 +5,13 @@ import NewProductForm from '../components/NewProductForm';
 import { useData } from '../context/InventoryContext';
 
 const Products = () => {
-    const {inventoryInfo} = useData();
+    const {inventoryInfo, productDepartment
+        } = useData();
     const [showForm, setShowForm] = useState(false);
 
     const departments = [...new Set(inventoryInfo?.map(({department}) => department))]
 
-    const [selectDepartment, setSelectDepartment] = useState("")
+    const [selectDepartment, setSelectDepartment] = useState(productDepartment)
     const [filterBy, setFilterBy] = useState("")
     const [checkedLowStock, setCheckedLowStock] = useState(false)
 
